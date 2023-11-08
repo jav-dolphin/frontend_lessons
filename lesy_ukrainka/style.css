@@ -1,9 +1,10 @@
 ul {
-    
+
     font-family: Arial, Helvetica, sans-serif;
-   
+
 }
-.menu{
+
+.menu {
     margin: 0;
     /* зовнішні відступи */
     padding: 0;
@@ -36,11 +37,38 @@ td {
 }
 
 .inline_li {
+    margin-right: 15px;
     display: inline-block;
 }
-.inline_nav{
-    display: inline-block;
+
+.inline_li:last-child {
+    margin-right: 0px;
+
 }
+
+#navs_inline {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#navs_inline_right {
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+
+}
+
 #nav_1 {
     margin-right: 40px;
+}
+
+#inline_text_and_img {
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 200px;
 }
