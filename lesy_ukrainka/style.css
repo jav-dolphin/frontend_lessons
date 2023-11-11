@@ -1,7 +1,5 @@
-ul {
-
-    font-family: Arial, Helvetica, sans-serif;
-
+body {
+    font-family: sans-serif;
 }
 
 .menu {
@@ -14,6 +12,11 @@ ul {
 
 a {
     text-decoration: none;
+    color: #0645ad;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -21,7 +24,8 @@ h1 {
     font-style: italic;
     text-decoration: underline;*/
 
-    font: lighter 24px Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
 }
 
 p {
@@ -37,38 +41,111 @@ td {
 }
 
 .inline_li {
-    margin-right: 15px;
     display: inline-block;
+    margin-left: 5px;
+
 }
 
-.inline_li:last-child {
-    margin-right: 0px;
+.tabs {
+    height: 34px;
+    padding-top: 16px;
+    margin-left: -6px;
+    background-position: right bottom;
+    background-image: linear-gradient(to top, #e8f2f8, #ffffff);
 
+}
+
+.tabs::before,
+.tabs::after {
+    content: "";
+    margin-top: -3px;
+    display: inline-block;
+    width: 1px;
+    height: 37px;
+    background-image: linear-gradient(to bottom, rgba(167, 215, 249, 0) 0, #a7d7f9 100%);
+}
+
+.tabs::before {
+    margin-right: 8px;
+}
+
+.tabs::after {
+    margin-left: 8px;
+}
+
+.tabs>a {
+    vertical-align: 10px;
+}
+
+.active {
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+.active::before, .active::after {
+margin-top: -4px;
+}
+
+.active>a {
+    color: black;
+}
+
+.active:hover{
+    text-decoration: none;
+}
+
+
+.inline_li:first-child,
+.tabs:first-child {
+    margin-left: 0px;
+}
+
+
+#navs_inline_right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+#navs_inlaene_right>span {
+    color: #54595d;
+
+}
+
+.icons {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    vertical-align: middle;
+
+}
+
+#user_icon {
+    background-image: url("https://uk.wikipedia.org/w/skins/Vector/resources/skins.vector.styles.legacy/images/user-avatar.svg?b7f58");
 }
 
 #navs_inline {
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: -3.5px;
 }
 
-#navs_inline_right {
-    display: flex;
-    justify-content: flex-end;
-    gap:20px;
 
-}
 
 #nav_1 {
     margin-right: 40px;
 }
-
+main{
+    border: 1px solid #a7d7f9;
+}
 #inline_text_and_img {
     display: flex;
-    gap:20px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
 }
-img{
+
+img {
     width: 200px;
 }
