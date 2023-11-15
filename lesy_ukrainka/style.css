@@ -1,5 +1,16 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
+    background-color: #f6f6f6;
+}
+
+li {
+    font-size: 12px;
 }
 
 .menu {
@@ -19,25 +30,29 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    /* font-size: 24px;
-    font-style: italic;
-    text-decoration: underline;*/
-
+.main_title {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
     font-weight: lighter;
-    font-size: 24px;
 }
+
+h1>.main_title {
+    font-size: 29px;
+}
+
+.edit_section {
+    margin-left: 13px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
 
 p {
     font: 16px Arial, Helvetica, sans-serif;
 }
 
-th {
-    font: 700 18px Arial, Helvetica, sans-serif;
-}
-
-td {
-    font: 16px Arial, Helvetica, sans-serif;
+header {
+    padding-top: 8px;
+    padding-right: 16px;
 }
 
 .inline_li {
@@ -47,11 +62,12 @@ td {
 }
 
 .tabs {
+    font-size: 13px;
     height: 34px;
     padding-top: 16px;
     margin-left: -6px;
     background-position: right bottom;
-    background-image: linear-gradient(to top, #e8f2f8, #ffffff);
+    background-image: linear-gradient(to top, #e8f2f8, #f6f6f6);
 
 }
 
@@ -78,19 +94,20 @@ td {
 }
 
 .active {
-    background: white;
+    background: linear-gradient(to top, white, #f6f6f6);
     border-bottom: 1px solid white;
 }
 
-.active::before, .active::after {
-margin-top: -4px;
+.active::before,
+.active::after {
+    margin-top: -4px;
 }
 
 .active>a {
     color: black;
 }
 
-.active:hover{
+.active:hover {
     text-decoration: none;
 }
 
@@ -104,25 +121,58 @@ margin-top: -4px;
 #navs_inline_right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 14px;
 }
 
-#navs_inlaene_right>span {
+#navs_inline_right>span {
+    font-size: 12px;
     color: #54595d;
-
 }
+
+#navs_inline_right>.menu {
+    margin-bottom: 0;
+}
+
+#navs_input {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+input {
+    height: 16px;
+    width: 200px;
+    padding: 5px;
+    padding-right: 28px;
+    margin-bottom: 8px;
+}
+#input_search{
+    position: relative;
+}
+#search{
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    height: 16px;
+    width: 16px;
+    background-image: url("https://uk.wikipedia.org/w/skins/Vector/resources/skins.vector.styles.legacy/images/search.svg?ac00d");
+    background-size: cover;
+}
+
 
 .icons {
     display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin-top: -10px;
+    height: 14px;
+    width: 14px;
+    margin-top: -6px;
     vertical-align: middle;
 
 }
 
 #user_icon {
     background-image: url("https://uk.wikipedia.org/w/skins/Vector/resources/skins.vector.styles.legacy/images/user-avatar.svg?b7f58");
+    background-size: contain;
 }
 
 #navs_inline {
@@ -136,9 +186,11 @@ margin-top: -4px;
 #nav_1 {
     margin-right: 40px;
 }
-main{
+
+main {
     border: 1px solid #a7d7f9;
 }
+
 #inline_text_and_img {
     display: flex;
     gap: 20px;
@@ -148,4 +200,90 @@ main{
 
 img {
     width: 200px;
+}
+
+#aside_main {
+    display: flex;
+}
+
+aside {
+    width: 160px;
+    margin: 0 17px;
+}
+
+aside>img {
+    height: 160px;
+    width: auto;
+    margin-bottom: 16px;
+}
+
+aside>nav {
+    margin: 16px 0 16px 12px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+aside li {
+    list-style-type: none;
+    padding: 3px 0;
+}
+
+h6 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #54595d;
+    overflow-x: hidden;
+}
+
+h6::after {
+    content: "";
+    display: block;
+    margin-top: 3px;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(200, 204, 209, 0), #c8ccd1 33%, #c8ccd1 66%, rgba(200, 204, 209, 0));
+}
+
+#settings_icon {
+    display: block;
+    height: 16px;
+    width: 14px;
+    margin-top: 0px;
+    float: right;
+    background: transparent url(https://uk.wikipedia.org/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.svg?cca73) center top;
+    background-repeat: no-repeat;
+}
+
+#pen {
+    background-image: url(https://uk.wikipedia.org/w/extensions/Wikibase/client/resources/images/edit.svg?34bc5);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+#edit {
+    display: block;
+    font-size: 12px;
+    color: #0645ad;
+    text-align: right;
+}
+
+#edit:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    padding: 20px 24px 24px;
+
 }
